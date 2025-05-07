@@ -48,23 +48,7 @@ function updatePhoneCode() {
       });
     });
   
-  const hamburger = document.getElementById('hamburger');
-  const drawer = document.getElementById('drawer');
-
-  // Toggle drawer
-  hamburger.addEventListener('click', (e) => {
-    e.stopPropagation(); // Prevent the click from bubbling to the document
-    drawer.classList.toggle('translate-x-full');
-  });
-
-  // Clicking outside the drawer closes it
-  document.addEventListener('click', (e) => {
-    if (!drawer.contains(e.target) && !hamburger.contains(e.target)) {
-      drawer.classList.add('translate-x-full');
-    }
-  });
-
-  // Prevent clicks inside the drawer from closing it
-  drawer.addEventListener('click', (e) => {
-    e.stopPropagation();
-  });
+  function toggleMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('show');
+}
