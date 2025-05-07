@@ -48,8 +48,6 @@ function updatePhoneCode() {
       });
     });
   
-
-<script>
   const hamburger = document.getElementById('hamburger');
   const drawer = document.getElementById('drawer');
 
@@ -70,4 +68,3 @@ function updatePhoneCode() {
   drawer.addEventListener('click', (e) => {
     e.stopPropagation();
   });
-</script>
