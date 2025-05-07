@@ -49,18 +49,25 @@ function updatePhoneCode() {
     });
   
 
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('drawer');
 
-function toggleMenu() {
-  navLinks.classList.toggle('show');
-}
+  // Toggle drawer
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent the click from bubbling to the document
+    drawer.classList.toggle('translate-x-full');
+  });
 
-document.addEventListener('click', function(event) {
-  const isClickInsideMenu = navLinks.contains(event.target);
-  const isClickOnHamburger = hamburger.contains(event.target);
+  // Clicking outside the drawer closes it
+  document.addEventListener('click', (e) => {
+    if (!drawer.contains(e.target) && !hamburger.contains(e.target)) {
+      drawer.classList.add('translate-x-full');
+    }
+  });
 
-  if (!isClickInsideMenu && !isClickOnHamburger) {
-    navLinks.classList.remove('show');
-  }
-}); 
+  // Prevent clicks inside the drawer from closing it
+  drawer.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+</script>
