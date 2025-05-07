@@ -49,7 +49,18 @@ function updatePhoneCode() {
     });
   
 
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
 function toggleMenu() {
-      const navLinks = document.querySelector('.nav-links');
-      navLinks.classList.toggle('active');
-    }
+  navLinks.classList.toggle('show');
+}
+
+document.addEventListener('click', function(event) {
+  const isClickInsideMenu = navLinks.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+
+  if (!isClickInsideMenu && !isClickOnHamburger) {
+    navLinks.classList.remove('show');
+  }
+}); 
