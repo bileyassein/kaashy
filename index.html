@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaashy - Your Go-To Money App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="Logo.svg" alt="logo" class="logo-image" />
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Features</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1 class="fade-in">Welcome to Kaashy</h1>
+    <p class="fade-in">Fast, Secure, and Seamless Money Swapping, and More in One App.</p>
+    <div class="call-to-action">
+      <a href="#about" class="btn fade-in" id="btn1">Download on iOS</a>
+      <a href="#about" class="btn fade-in" id="btn2">Download on Android</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <h2>About Kaashy</h2>
+    <p>Kaashy is a modern financial platform built to make everyday transactions
+      simple, fast, and accessible. We bring together essential money services
+      in one easy-to-use app—allowing users to swap between mobile money services,
+      buy internet bundles, and manage their funds with confidence and ease. At
+      Kaashy, we believe that managing your money shouldn’t be complicated.
+      That’s why we’re focused on delivering a seamless, secure, and intuitive experience
+      for everyone.</p>
+    <p>Whether you're sending money, swapping between wallets, or staying connected online,
+      Kaashy is designed to meet your needs with reliability and speed. We’re here to transform
+      the way you move your money.</p>
+    <div class="mission-section">
+        <h2>Our Mission & Vision</h2>
+        <div class="mission-boxes">
+            <div class="mission-box">
+                <h3>Mission Statements</h3>
+                <p>To simplify digital finance in the Horn of Africa through a secure platform
+                  for swapping, sending, and managing fiat and crypto with ease.</p>
+            </div>
+            <div class="mission-box">
+                <h3>Vision Statement</h3>
+                <p>Our vision is to become the leading fiat and crypto wallet and exchanger in
+                  the Horn of Africa.
+                </p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <h2>Features</h2>
+    <div class="service-cards">
+      <div class="card fade-in">
+        <h3>In-App Wallet</h3>
+        <p>Securely save, send, or receive your funds all in one place with Kaashy's built-in wallet.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Fiat Swapping</h3>
+        <p>Easily exchange money between different mobile money platforms and accounts—fast, safe, and hassle-free.</p>
+      </div>
+      <div class="card fade-in">
+        <h3>Buy Mobile Data</h3>
+        <p>Top up internet bundles instantly for any network without leaving the app.</p>
+      </div>
+    </div>
+    <div class="download-section">
+      <div class="download-content">
+          <div class="phone-image">
+              <img src="phone.png" alt="Phone Image">
+          </div>
+          <div class="app-features">
+              <h2>Download Our App</h2>
+              <p>Discover amazing features with our app.</p>
+              <ul class="features-list">
+                  <li><i class="fas fa-check-circle"></i> Feature One</li>
+                  <li><i class="fas fa-check-circle"></i> Feature Two</li>
+                  <li><i class="fas fa-check-circle"></i> Feature Three</li>
+              </ul>
+              <div class="download-buttons">
+                  <a href="#"><img src="play-store.png" alt="Download on Play Store"></a>
+                  <a href="#"><img src="app-store.png" alt="Download on App Store"></a>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <p>Have questions? We'd love to hear from you!</p>
+    <form class="contact-form">
+      <input id="name" type="text" placeholder="Your Name" required>
+      <input id="email" type="email" placeholder="Your Email" required>
+  
+      <div class="phone-group">
+        <select id="country" onchange="updatePhoneCode()" required>
+          <option value="" disabled selected>Choose Country</option>
+          <option value="+252">Somaliland (+252)</option>
+          <option value="+252">Somalia (+252)</option>
+          <option value="+1">Kenya (+254)</option>
+          <option value="+44">Ethiopia (+251)</option>
+          <option value="+254">Djibouti (+253)</option>
+        </select>
+  
+        <input type="phone" id="phone" placeholder="Your Phone Number" required />
+      </div>
+  
+      <textarea type="textarea" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+  
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="download.svg" alt="Kaashy Logo">
+            <p>Kaashy is your digital wallet for smart money swaps, mobile data bundles & more — built for convenience in your daily life.</p>
+        </div>
+        <div class="footer-nav">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-nav">
+            <h3>Legal</h3>
+            <ul>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <!-- <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><a href="#"></a><i class="fas fa-map-marker-alt"></i> 123 Main Street, City, Country</a></li>
+                <li><a href="#"></a><i class="fas fa-phone"></i> (123) 456-7890</a></li>
+                <li><a href="#"></a><i class="fas fa-envelope"></i> info@kaashy.com</a></li>
+            </ul>
+      </div> -->
+        <div class="footer-social">
+            <h3>Connect With Us</h3>
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Kaashy Technologies Ltd. All rights reserved.</p>
+    </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"></script>
+
+</body>
+</html>
